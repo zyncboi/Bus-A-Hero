@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ceebee">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/drivertextview"
+            android:layout_width="275dp"
+            android:layout_height="43dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="@string/drivertext"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Switch
+            android:id="@+id/statusswitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="68dp"
+            android:buttonTint="#80EC74"
+            android:layout_marginEnd="20dp"
+            android:minWidth="48dp"
+            android:minHeight="50dp"
+            app:layout_constraintEnd_toEndOf="@+id/constraintLayout"
+            tools:layout_editor_absoluteY="0dp"
+            tools:ignore="MissingConstraints" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/driverstatustext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="19dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Status: idle"
+        android:textColor="@color/black"
+
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+    <TextView
+        android:id="@+id/drivercapacitytext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="45dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Capacity: "
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/constraintLayout"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+
+
+    <Button
+        android:id="@+id/seatsavailable"
+        android:layout_width="183dp"
+        android:layout_height="153dp"
+        android:layout_marginBottom="62dp"
+        android:background="@drawable/greencircle"
+        android:text="Seats Available"
+        android:textSize="25sp"
+        android:fontFamily="@font/forma"
+        app:layout_constraintBottom_toTopOf="@+id/standingonly"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/driverstatustext" />
+
+    <Button
+        android:id="@+id/standingonly"
+        android:layout_width="183dp"
+        android:layout_height="153dp"
+        android:layout_marginBottom="62dp"
+        android:background="@drawable/warningcircle"
+        android:fontFamily="@font/forma"
+        android:text="Standing Only"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/full"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seatsavailable" />
+
+    <Button
+        android:id="@+id/full"
+        android:layout_width="183dp"
+        android:layout_height="153dp"
+        android:layout_marginBottom="62dp"
+        android:fontFamily="@font/forma"
+        android:background="@drawable/redcircle"
+        android:text="No More Space"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/standingonly" />
+
+    <TextView
+        android:id="@+id/logoutdriver"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:fontFamily="@font/forma"
+        android:gravity="right"
+        android:text="Sign Out"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="TextSizeCheck"
+        tools:layout_editor_absoluteX="10dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

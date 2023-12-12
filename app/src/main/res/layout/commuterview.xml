@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ccc"
+    tools:ignore="HardcodedText">
+
+    <RelativeLayout
+        android:id="@+id/everythingelse"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/ActionBar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            app:titleTextColor="@color/white"
+            android:background="@color/background">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginEnd="10dp"
+                android:id="@+id/toggleNavigationDrawer"
+                android:src="@drawable/hamburger_menu_svgrepo_com" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:text="Real Time Bus Tracking"/>
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <fragment
+            android:id="@+id/mapFragment"
+            android:name="com.google.android.gms.maps.MapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="450dp"
+            android:layout_below="@id/ActionBar" />
+
+        <!-- Button -->
+        <Button
+            android:id="@+id/zoomlocation"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="450dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/rounded_location_button"
+            android:contentDescription="@string/update_location"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <!-- Nearest Bus CardView -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/nearestBusCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mapFragment"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="16dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/nearestBusLabel"
+                    android:layout_width="match_parent"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:layout_height="wrap_content"
+                    android:text="No Bus Nearby"
+                    android:fontFamily="serif"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/driverFullName"
+                    android:layout_width="wrap_content"
+                    android:fontFamily="serif"
+                    android:textColor="@color/black"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/nearestBusRoute"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:fontFamily="serif"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/nearestBusCapacity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:fontFamily="serif"
+                    android:text=""
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/zoomBusLocation"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_gravity="right|bottom"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/rounded_location_button"
+                    android:contentDescription="@string/update_location"
+                    tools:ignore="TouchTargetSizeCheck" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/navigation_header"
+        android:id="@+id/NavigationViewCommuter"
+        app:menu="@menu/commuter_view_navigation_menu"/>
+
+</androidx.drawerlayout.widget.DrawerLayout>

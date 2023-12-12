@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "1002078417028",
+    "firebase_url": "https://bus-a-hero-default-rtdb.firebaseio.com",
+    "project_id": "bus-a-hero",
+    "storage_bucket": "bus-a-hero.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1002078417028:android:9717df97cec4213e7b92d1",
+        "android_client_info": {
+          "package_name": "com.busahero.busahero"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAtleOJtwzc9AkZzZFOvGkcf6fbzEhAiSw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

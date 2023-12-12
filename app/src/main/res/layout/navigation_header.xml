@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:background="@drawable/header_bg">
+
+    <ImageView
+        android:id="@+id/profilepic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center"
+        android:layout_marginTop="25dp"
+        android:src="@drawable/profile" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="25dp"
+        android:orientation="vertical"
+        android:layout_below="@+id/profilepic">
+
+        <TextView
+            android:id="@+id/CommuterName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="#ffff"
+            android:text="Kevin Jeff Ouano"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/CommuterUUID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="15sp"
+            android:textStyle="italic"
+            android:textColor="#ffff"
+            android:text="ID: "
+            android:textAlignment="center" />
+
+    </LinearLayout>
+
+</FrameLayout>

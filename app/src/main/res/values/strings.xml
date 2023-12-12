@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">busahero</string>
+    <string name="drivertext">Welcome, Manong G</string>
+    <string name="new_user">NEW USER</string>
+    <string name="account_type">Account Type:</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="driver">Driver</string>
+    <string name="email">Email</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="update_location">Update Location</string>
+    <string name="navigation_drawer_open">Open Navigation Drawer</string>
+    <string name="navigation_drawer_close">Close Navigation Drawer</string>
+</resources>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.busahero.busahero">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <application
+
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/mainicon"
+        android:label="Bus-A-Hero"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+        tools:targetApi="34">
+
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyBBIfnKOR1BRQTc2iZGlh0AJejqEfRgTY0" />
+
+        <activity android:name=".welcome" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".AvailableBusses" android:exported="true" android:parentActivityName=".CommuterView">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".CommuterView" />
+        </activity>
+        <activity android:name=".Authentication" android:exported="true"/>
+        <activity android:name=".Registration" android:exported="true"/>
+        <activity android:name=".DriverView" android:exported="true"/>
+        <activity android:name=".CommuterView" android:exported="true"/>
+
+
+
+    </application>
+
+</manifest>
